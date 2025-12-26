@@ -18,8 +18,8 @@
 
         .slides {
             display: flex;
-            width: 400%;
-            animation: slide 16s infinite;
+            width: 500%; /* 5 images = 500% */
+            animation: slide 20s infinite; /* 20s pour 5 images, 4s chacune */
         }
 
         .slides img {
@@ -29,11 +29,20 @@
         }
 
         @keyframes slide {
-            0%   { transform: translateX(0); }
+            0%   { transform: translateX(0%); }
+            20%  { transform: translateX(0%); }
+
             25%  { transform: translateX(-100%); }
-            50%  { transform: translateX(-200%); }
-            75%  { transform: translateX(-300%); }
-            100% { transform: translateX(0); }
+            40%  { transform: translateX(-100%); }
+
+            45%  { transform: translateX(-200%); }
+            60%  { transform: translateX(-200%); }
+
+            65%  { transform: translateX(-300%); }
+            80%  { transform: translateX(-300%); }
+
+            85%  { transform: translateX(-400%); }
+            100% { transform: translateX(-400%); }
         }
     </style>
 </head>
@@ -78,6 +87,6 @@
 <footer>
     <p>&copy; 2025 Internat Michel de Montaigne</p>
 </footer>
-    
+
 </body>
 </html>
